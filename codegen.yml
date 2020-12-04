@@ -1,0 +1,13 @@
+generates:
+  ./src/schemas/gen-types.ts:
+    schema:
+      - src/schemas/info.ts
+      - src/schemas/distance.ts
+    plugins:
+      - typescript
+      - typescript-resolvers
+    config:
+      namingConvention: keep
+      noSchemaStitching: false
+      contextType: ../main#Context
+      showUnusedMappers: true
